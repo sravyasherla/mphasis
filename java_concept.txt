@@ -1,0 +1,199 @@
+package org.day1;
+
+import java.util.Scanner;
+
+public class First 
+	{
+		int empno;
+		String name,address;
+void input()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter empno,name,address");
+    empno=ob.nextInt();
+    name=ob.next();
+    address=ob.next();
+}
+void display()
+{
+	System.out.println("the empno is "+empno);
+	System.out.println("the name is "+name);
+	System.out.println("the address is "+address);
+}
+public static void main(String[] args)
+{
+	First ob1=new First();
+	ob1.input();
+	ob1.display();
+	System.out.println("the empno is "+ob1.empno);	
+}
+}
+
+
+enter empno,name,address
+2355 sravya 5-6-137
+the empno is 2355
+the name is sravya
+the address is 5-6-137
+the empno is 2355
+
+OOPs concept 
+***************
+->Deals with the real world entity
+->class
+->object
+->inheritance:-the main purpose of inheritance is we can use the existing code without
+starting from the scarch(reuse of existing code).In this existing code is the parent/base/super class and the 
+class which is inherited the parent class is the child/derive/sub-class.
+
+we use the keyword super to accessing the super class methods and variables. we use extends
+keyword to inherit the super class into class(example:-class First extends Second).
+
+In java it supports only single inheritance.(single,multi-level,hierarchial)
+
+we create objectof the child class and access the parent class properties.
+
+**************************************************************************************************************
+
+package org.day1;
+import java.util.*;
+public class second extends First
+{
+	String email;
+	float salary;
+	void input()
+	{
+		super.input();
+		Scanner ob =new Scanner(System.in);
+		System.out.println("enter email and salary");
+		email=ob.next();
+		salary=ob.nextFloat();
+	}
+void display()
+{
+	super.display();
+	System.out.println("the email is :"+email);
+	System.out.println("the salary is :"+salary);
+}
+	public static void main(String[] args)
+		{
+		second ob=new second();
+		ob.input();
+		ob.display();
+		}
+
+}
+
+*******************************************************************************************************************
+
+
+package org.day1;
+import java.util.*;
+public class Third {
+	int rollno;
+	String name,std;
+void input()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter rollno,name,std");
+	rollno=ob.nextInt();
+	name=ob.next();
+	std=ob.next();
+}
+void display()
+{
+	System.out.println("rollno is: "+rollno);
+	System.out.println("name is: "+name);
+	System.out.println("std in: "+std);
+}
+	public static void main(String[] args) {
+		Third ob1=new Third();
+		ob1.input();
+		ob1.display();
+		
+	}
+
+}
+
+************************************************************************************************************************
+
+package org.day1;
+import java.util.*;
+public class Fourth extends Third
+{
+	float phy,m1,m2;
+	float sum1,avg;
+void input()
+{
+	super.input();
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter the marks of phy,m1,m2");
+	phy=ob.nextFloat();
+	m1=ob.nextFloat();
+	m2=ob.nextFloat();	
+}
+void display()
+{
+	super.display();
+	System.out.println("enter the marks of phy: "+phy);
+	System.out.println("enter the marks of m1: "+m1);
+	System.out.println("enter the marks of m2: "+m2);
+}
+void sum()
+{
+	sum1=phy+m1+m2;
+	avg=sum1/3;
+	System.out.println("the sum of the marks: "+sum1);
+	System.out.println("the avg of the marks: "+avg);
+}
+	public static void main(String[] args) {
+		{
+			Fourth ob=new Fourth();
+			ob.input();
+			ob.display();
+			ob.sum();
+		}
+
+	}
+
+}
+
+****************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
